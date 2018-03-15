@@ -13,7 +13,6 @@
 
     <!-- Mustache template -->
     <script id="template" type="x-tmpl-mustache">
-        {{#tweets}}
         <div class="card p-3">
             <div class="card-body">
                 <h5 class="card-title">
@@ -26,7 +25,6 @@
                 <p class="card-text">{{unmodifiedText}}</p>
             </div>
         </div>
-        {{/tweets}}
     </script>
 </head>
 <body>
@@ -47,21 +45,19 @@
 <script src="http://code.jquery.com/jquery-3.0.0.min.js"
         th:src="@{/webjars/jquery/3.0.0/jquery.min.js}"></script>
 
-
-<script
-        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         th:src="@{/webjars/bootstrap/4.0.0/js/bootstrap.min.js}"></script>
 
-<script
-        src="https://cdn.jsdelivr.net/npm/mustache@2.3.0/mustache.min.js"
+<script src="https://cdn.jsdelivr.net/npm/mustache@2.3.0/mustache.min.js"
         th:src="@{/webjars/mustache/2.3.0/mustache.min.js}"></script>
-
 
 <script defer="" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
         th:src="@{/webjars/font-awesome/5.0.6/svg-with-js/js/fontawesome-all.js}"></script>
 
-<script th:src="@{/functions.js}"
-        src="../static/functions.js"></script>
+<script th:src="@{/functions.js}" src="../static/functions.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
 
 </body>
 </html>
